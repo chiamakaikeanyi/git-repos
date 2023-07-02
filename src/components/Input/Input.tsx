@@ -4,9 +4,8 @@ import type {
   KeyboardEventHandler,
   ReactNode,
 } from "react";
-
 import styles from "./Input.module.scss";
-
+import { composeClass } from "../../utils";
 
 interface IProps {
   type?: string;
@@ -37,7 +36,7 @@ const Input: React.FC<IProps> = ({
   icon,
   iconName,
   name,
-  className,
+  customClass = "",
   placeholder,
   defaultValue,
   type = "text",
@@ -54,13 +53,7 @@ const Input: React.FC<IProps> = ({
   onKeyUp,
 }) => {
   return (
-    <div className={className}>
-      {icon ? (
-        <label htmlFor={name} className="visually-hidden">
-          {iconName}
-        </label>
-      ) : null}
-
+    <div className={styles.wrapper}>
       {icon ? <span className={styles.icon}>{icon}</span> : null}
       <input
         id={name}
@@ -69,7 +62,7 @@ const Input: React.FC<IProps> = ({
         placeholder={placeholder}
         defaultValue={defaultValue}
         value={value}
-        className={styles.input}
+        className={composeClass(styles.input, customClass)}
         autoComplete={autoComplete}
         onChange={onChange}
         onFocus={onFocus}

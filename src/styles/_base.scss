@@ -1,17 +1,27 @@
 :root {
-  --primary-color: hsl(0deg 0% 100%);
-  --font-color: hsl(200deg 15% 8%);
-  --input-color: hsl(0deg 0% 52%);
-  --bg-color: hsl(0deg 0% 98%);
-  --shadow: #e3e3e3;
+  --background-color: hsl(227deg 100% 98%);
+  --primary-color: hsl(212deg 100% 50%);
+  --font-color: hsl(217deg 20% 51%);
+  --button-text-color: hsl(0deg 0% 100%);
+  --heading-text-color: hsl(217deg 21% 21%);
+  --foreground-color: hsl(0deg 0% 100%);
+  --active-color: hsl(222deg 44% 70%);
+  --secondary-active-color: hsl(212deg 100% 69%);
+  --disabled-color: hsl(216deg 28% 72%);
+  --warning-color: hsl(0deg 91% 62%);
 }
 
 [data-theme="dark"] {
-  --primary-color: hsl(209deg 23% 22%);
-  --font-color: hsl(0deg 0% 100%);
-  --input-color: hsl(0deg 0% 100%);
-  --bg-color: hsl(207deg 26% 17%);
-  --shadow: #151b22;
+  --background-color: hsl(220deg 40% 13%);
+  --primary-color: hsl(212deg 100% 50%);
+  --font-color: #fff;
+  --button-text-color: hsl(0deg 0% 100%);
+  --heading-text-color: hsl(0deg 0% 100%);
+  --foreground-color: hsl(222deg 41% 20%);
+  --active-color: hsl(222deg 44% 70%);
+  --secondary-active-color: hsl(212deg 100% 69%);
+  --disabled-color: hsl(220deg 10% 60%);
+  --warning-color: hsl(0deg 91% 62%);
 }
 
 * {
@@ -25,10 +35,11 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--background-color);
   color: var(--font-color);
-  font-family: Space Mono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Space Mono, monospace, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

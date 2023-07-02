@@ -3,8 +3,7 @@
 .button {
   align-items: center;
   border: none;
-  border-radius: converter.to-rem(3);
-  color: var(--font-color);
+  border-radius: converter.to-rem(10);
   cursor: pointer;
   display: flex;
   flex-wrap: wrap;

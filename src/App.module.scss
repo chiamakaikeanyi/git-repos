@@ -3,31 +3,31 @@
 @use "styles/converter";
 
 .container {
+  -moz-box-pack: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  max-width: 730px;
   min-height: 100vh;
+  padding: 0 100px;
   position: relative;
 }
 
 .header {
   align-items: center;
-  box-shadow: 0 -5px 8px var(--shadow);
   display: flex;
-  height: 80px;
   justify-content: space-between;
-  padding: 0 30px;
-  position: sticky;
-  top: 0;
   width: 100%;
-  z-index: 2;
 }
 
 .main {
-  margin: 30px auto;
-  padding: 30px;
-  padding-bottom: 60px;
+  padding: 50px 0;
 }
 
 .skip_to_main {
-  background: colors.$palette--red;
+  background: colors.$palette--orange;
   color: colors.$palette--white;
   left: converter.to-rem(-999);
   padding: converter.to-rem(5);

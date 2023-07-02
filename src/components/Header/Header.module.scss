@@ -1,9 +1,10 @@
-@use "styles/converter";
-@use "styles/typography";
+@use "../../styles/converter";
+@use "../../styles/typography";
 
 .theme_switch {
   background: none;
   border: none;
+  color: var(--font-color);
   font-weight: typography.$font-weight-bold;
   letter-spacing: 2.5px;
   padding: converter.to-rem(20);
