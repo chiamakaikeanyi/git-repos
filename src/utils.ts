@@ -1,7 +1,7 @@
 /**
  * Combines a number of styles
  */
-export const classNames = (...styles: string[]) => {
+export const composeClass = (...styles: string[]) => {
   let classes = "";
 
   styles.forEach((arg) => {

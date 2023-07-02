@@ -18,18 +18,19 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <nav>
+      <nav className={styles.app_name}>
         <Link to="/">
           <h1>Git Repos</h1>
         </Link>
       </nav>
       <Button
-        label=""
+        label={theme === "dark" ? "Light" : "Dark"}
         aria-label={
           theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
         }
         icon={theme === "dark" ? <SunIcon color="#fff" /> : <MoonIcon />}
-        className={styles.theme_switch}
+        iconPosition="right"
+        customClass={styles.theme_switch}
         testId="theme_switch"
         onClick={handleThemeChange}
       />

@@ -23,29 +23,24 @@
 
 These instructions will get you a copy of the project on your local machine for development and testing purposes.
 
-Ensure you have the following set up locally:
-
--   [Node](https://nodejs.org)
--   [Git](https://www.atlassian.com/git/tutorials/install-git)
-
 Clone the repository using any of the methods stated below.
 
 **Via SSH**
 
 ```sh
-git clone git@github.com:chiamakaikeanyi/PROJECT_NAME.git
+git clone git@github.com:chiamakaikeanyi/git-repos.git
 ```
 
 **Via HTTPS**
 
 ```sh
-git clone https://github.com/chiamakaikeanyi/PROJECT_NAME.git
+git clone https://github.com/chiamakaikeanyi/git-repos.git
 ```
 
 Switch to the directory
 
 ```sh
-cd PROJECT_NAME
+cd git-repos
 ```
 
 Install the dependencies
@@ -62,6 +57,4 @@ Run the command below to start the web app
 yarn start
 ```
 
-The browser is expected to launch the app on the browser on http://localhost:3000.
-
-<!-- translations, loading skeleton, tests, danger,  workflow, docker, grafana, kubernetes -->
+The browser is expected to launch the app on the browser on http://localhost:3004.

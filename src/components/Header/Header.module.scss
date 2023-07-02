@@ -4,7 +4,8 @@
 .theme_switch {
   background: none;
   border: none;
-  font-weight: typography.$font-weight-medium;
+  font-weight: typography.$font-weight-bold;
+  letter-spacing: 2.5px;
   padding: converter.to-rem(20);
   text-transform: uppercase;
 }
