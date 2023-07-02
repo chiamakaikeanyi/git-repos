@@ -1,0 +1,44 @@
+@use "styles/shared";
+@use "styles/colors";
+@use "styles/converter";
+
+.container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.header {
+  align-items: center;
+  box-shadow: 0 -5px 8px var(--shadow);
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.main {
+  margin: 30px auto;
+  padding: 30px;
+  padding-bottom: 60px;
+}
+
+.skip_to_main {
+  background: colors.$palette--red;
+  color: colors.$palette--white;
+  left: converter.to-rem(-999);
+  padding: converter.to-rem(5);
+  position: absolute;
+  top: converter.to-rem(-50);
+  transition: top 1s ease-out;
+  z-index: -999;
+
+  &:focus {
+    left: 0;
+    top: 0;
+    z-index: 999;
+  }
+}

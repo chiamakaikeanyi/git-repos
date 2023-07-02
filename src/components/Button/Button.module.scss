@@ -1,0 +1,17 @@
+@use "../../styles/converter";
+
+.button {
+  align-items: center;
+  border: none;
+  border-radius: converter.to-rem(3);
+  color: var(--font-color);
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  outline-color: var(--primary-color);
+  padding: converter.to-rem(5 10);
+}
+
+.icon {
+  margin-right: converter.to-rem(5);
+}

@@ -1,0 +1,5 @@
+#!/bin/bash
+# chmod u+x .husky/pre-push
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn pre-push:script

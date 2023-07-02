@@ -1,0 +1,87 @@
+:root {
+  --primary-color: hsl(0deg 0% 100%);
+  --font-color: hsl(200deg 15% 8%);
+  --input-color: hsl(0deg 0% 52%);
+  --bg-color: hsl(0deg 0% 98%);
+  --shadow: #e3e3e3;
+}
+
+[data-theme="dark"] {
+  --primary-color: hsl(209deg 23% 22%);
+  --font-color: hsl(0deg 0% 100%);
+  --input-color: hsl(0deg 0% 100%);
+  --bg-color: hsl(207deg 26% 17%);
+  --shadow: #151b22;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    border-radius: 2px;
+    outline: thin solid var(--font-color);
+    outline-offset: 0.25rem;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: Space Mono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+ul {
+  margin: 0;
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+// attributes & states
+[hidden] {
+  display: none !important;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// disable WebKit’s proprietary pseudo elements
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+// utility classes
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  left: -9999px;
+  position: absolute;
+  top: -9999px;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

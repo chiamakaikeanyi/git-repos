@@ -1,0 +1,10 @@
+@use "styles/converter";
+@use "styles/typography";
+
+.theme_switch {
+  background: none;
+  border: none;
+  font-weight: typography.$font-weight-medium;
+  padding: converter.to-rem(20);
+  text-transform: uppercase;
+}
