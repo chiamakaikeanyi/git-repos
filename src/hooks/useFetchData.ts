@@ -42,7 +42,7 @@ const useFetchData = ({ url, options }: OptionsType) => {
     };
 
     fetchData();
-    //eslint-disable-next-line react-hooks/exhaustive-deps
+    //eslint-disable-next-line
   }, [url]);
 
   return { data, isLoading, error };

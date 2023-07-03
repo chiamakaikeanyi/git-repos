@@ -5,10 +5,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styles from "./App.module.scss";
 import Header from "./components/Header/Header";
 import { ThemeProvider } from "./context/ThemeContext";
+import { UserContextProvider } from "./context/UserContext";
 import ErrorBoundary from "./ErrorBoundary";
 import useNetworkStatus from "./hooks/useNetworkStatus";
 import Home from "./pages/Home/Home";
-import { UserContextProvider } from "./context/UserContext";
 
 function App() {
   const { isOnline } = useNetworkStatus();

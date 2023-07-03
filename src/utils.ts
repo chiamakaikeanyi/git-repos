@@ -1,3 +1,5 @@
+import { IRepository } from "./types/types";
+
 /**
  * Combines a number of styles
  */
@@ -34,4 +36,11 @@ export const omit = (targetObj: Record<string, string>, props: string[]) => {
 
 export const stripHtmlTags = (data: string) => {
   return data.replace(/(<([^>]+)>)/gi, "");
+};
+
+export const sortByStarsDescending = (a: IRepository, b: IRepository) => {
+  if (a.stargazers_count < b.stargazers_count) return 1;
+  if (b.stargazers_count < a.stargazers_count) return -1;
+
+  return 0;
 };

@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
-import { useUserContext } from "../../context/UserContext";
-import styles from "./SearchBar.module.scss";
+import React, { useEffect, useState } from "react";
 
+import styles from "./SearchBar.module.scss";
+import { useUserContext } from "../../context/UserContext";
+import { apiClient } from "../../services/api-client";
+import { BASE_URL } from "../../services/constants";
+import Button from "../Button/Button";
 import { SearchIcon } from "../Icons";
 import Input from "../Input/Input";
-import Button from "../Button/Button";
-import { apiClient } from "../../services/api-client";
-
-const BASE_URL = "https://api.github.com";
 
 const SearchBar = () => {
   const { dispatch } = useUserContext();

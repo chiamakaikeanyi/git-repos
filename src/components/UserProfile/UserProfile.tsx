@@ -1,18 +1,19 @@
 import React from "react";
-import format from "date-fns/format";
-import styles from "./UserProfile.module.scss";
 
+import format from "date-fns/format";
+
+import styles from "./UserProfile.module.scss";
+import { useUserContext } from "../../context/UserContext";
+import { composeClass } from "../../utils";
 import {
   CompanyIcon,
   LocationIcon,
+  Spinner,
   TwitterIcon,
   WebsiteIcon,
-  Spinner,
 } from "../Icons";
-import { composeClass } from "../../utils";
-import { useUserContext } from "../../context/UserContext";
 
-export const UserProfile = () => {
+const UserProfile = () => {
   const { user } = useUserContext();
 
   if (!user) {
@@ -109,3 +110,5 @@ export const UserProfile = () => {
     </section>
   );
 };
+
+export default UserProfile;

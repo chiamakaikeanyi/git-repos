@@ -1,25 +1,12 @@
-import {
+import React, {
+  Dispatch,
   ReactNode,
   createContext,
   useContext,
   useReducer,
-  Dispatch,
 } from "react";
 
-export interface IUser {
-  login: string;
-  avatar_url: string;
-  location: string;
-  company: string;
-  bio?: string;
-  twitter_username?: string;
-  name: string;
-  blog: string;
-  created_at: string;
-  public_repos: number;
-  followers: number;
-  following: number;
-}
+import { IUser } from "../types/types";
 
 interface UserState {
   user: IUser | null;
@@ -41,13 +28,13 @@ export const UserReducer = (
   action: UserAction
 ): UserState => {
   switch (action.type) {
-    case "SET_USER":
-      return {
-        ...state,
-        user: action.payload,
-      };
-    default:
-      return state;
+  case "SET_USER":
+    return {
+      ...state,
+      user: action.payload,
+    };
+  default:
+    return state;
   }
 };
 
