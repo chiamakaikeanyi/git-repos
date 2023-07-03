@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./SearchBar.module.scss";
 import { useUserContext } from "../../context/UserContext";
 import { apiClient } from "../../services/api-client";
-import { BASE_URL } from "../../services/constants";
+import { BASE_URL, OCTOCAT_USER_NAME } from "../../services/constants";
 import Button from "../Button/Button";
 import { SearchIcon } from "../Icons";
 import Input from "../Input/Input";
@@ -30,7 +30,7 @@ const SearchBar = () => {
     let initialFetch = false;
 
     if (!initialFetch) {
-      getUser("octocat");
+      getUser(OCTOCAT_USER_NAME);
       initialFetch = true;
     }
     // eslint-disable-next-line
@@ -52,6 +52,7 @@ const SearchBar = () => {
         label="Search"
         onClick={() => getUser()}
         customClass={styles.button}
+        disabled={!username}
       />
     </label>
   );

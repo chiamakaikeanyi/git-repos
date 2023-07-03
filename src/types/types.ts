@@ -24,6 +24,6 @@ export interface IRepository {
 }
 
 export interface INavigation {
-  next: string;
-  prev: string;
+  next?: string;
+  prev?: string;
 }

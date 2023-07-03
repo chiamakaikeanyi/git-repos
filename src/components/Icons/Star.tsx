@@ -17,8 +17,8 @@ export const StarIcon: React.FC<IProps> = ({
       aria-label="star"
       viewBox="0 0 16 16"
       version="1.1"
-      width="16"
-      height="16"
+      width="13"
+      height="13"
       role="img"
     >
       <path

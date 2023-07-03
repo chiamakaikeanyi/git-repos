@@ -15,8 +15,8 @@ export const ForkIcon: React.FC<IProps> = ({
       className={className}
       aria-label="fork"
       viewBox="0 0 16 16"
-      width="16"
-      height="16"
+      width="13"
+      height="13"
     >
       <path
         fillRule="evenodd"

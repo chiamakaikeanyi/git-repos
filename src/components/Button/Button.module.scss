@@ -9,6 +9,11 @@
   flex-wrap: wrap;
   outline-color: var(--primary-color);
   padding: converter.to-rem(5 10);
+
+  &:disabled {
+    color: var(--disabled-color);
+    cursor: not-allowed;
+  }
 }
 
 .icon {

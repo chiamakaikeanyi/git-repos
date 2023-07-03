@@ -1,0 +1,30 @@
+@use "../../styles/typography";
+@use "../../styles/colors";
+@use "../../styles/breakpoint";
+@use "../../styles/converter";
+
+.wrapper {
+  align-items: center;
+  border-top: 1px solid rgb(143 150 163 / 5%);
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.navigation {
+  background: transparent;
+  color: var(--active-color);
+  font-weight: typography.$font-weight-dense;
+
+  &:disabled {
+    color: var(--disabled-color);
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      color: var(--secondary-active-color);
+    }
+  }
+}
