@@ -7,3 +7,4 @@ export { CompanyIcon } from "./Company";
 export { ForkIcon } from "./Fork";
 export { StarIcon } from "./Star";
 export { SearchIcon } from "./Search";
+export { Spinner } from "./Spinner";

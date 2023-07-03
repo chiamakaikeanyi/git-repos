@@ -1,0 +1,145 @@
+@use "../../styles/breakpoint";
+
+.wrapper {
+  background-color: var(--foreground-color);
+  border-radius: 16px;
+  box-shadow: #4961bc33 0 16px 30px -10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  min-height: 24px;
+  padding: 32px 24px 48px;
+
+  @include breakpoint.md {
+    padding-bottom: 20px;
+  }
+
+  @include breakpoint.lg {
+    padding: 48px;
+  }
+}
+
+.profile {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  @include breakpoint.lg {
+    font-size: 18px;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 70px;
+
+  @include breakpoint.md {
+    height: 117px;
+  }
+}
+
+.profile_details {
+  display: flex;
+  flex-direction: column;
+
+  .user_login {
+    color: var(--primary-color);
+  }
+
+  @include breakpoint.md {
+    .user_name {
+      font-size: 26px;
+    }
+
+    .user_login,
+    .user_joined_date {
+      font-size: 16px;
+    }
+  }
+
+  @include breakpoint.md {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 74px;
+    width: 100%;
+
+    .user_joined_date {
+      text-align: end;
+    }
+  }
+}
+
+.bio {
+  margin-bottom: 24px;
+
+  @include breakpoint.md {
+    font-size: 15px;
+  }
+}
+
+.summary {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 16px;
+  padding: 16px;
+
+  @include breakpoint.md {
+    padding: 16px 32px;
+  }
+}
+
+.stat {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+
+  .summary_title {
+    font-size: 11px;
+  }
+
+  @include breakpoint.md {
+    align-items: start;
+
+    .summary_title {
+      font-size: 13px;
+    }
+
+    .summary_content {
+      font-size: 22px;
+      text-align: left;
+    }
+  }
+}
+
+.info_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include breakpoint.md {
+    flex-wrap: wrap;
+    max-height: 72px;
+  }
+}
+
+.info {
+  align-items: center;
+  display: flex;
+  font-size: 13px;
+  gap: 16px;
+
+  & a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.no_info {
+  color: var(--disabled-color);
+}

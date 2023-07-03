@@ -15,7 +15,6 @@ interface IProps {
   value?: string;
   defaultValue?: string;
   icon?: ReactNode;
-  iconName?: string;
   customClass?: string;
   autoComplete?: string;
   pattern?: string;
@@ -34,7 +33,6 @@ interface IProps {
 const Input: React.FC<IProps> = ({
   value,
   icon,
-  iconName,
   name,
   customClass = "",
   placeholder,
@@ -53,7 +51,7 @@ const Input: React.FC<IProps> = ({
   onKeyUp,
 }) => {
   return (
-    <div className={styles.wrapper}>
+    <>
       {icon ? <span className={styles.icon}>{icon}</span> : null}
       <input
         id={name}
@@ -76,7 +74,7 @@ const Input: React.FC<IProps> = ({
         required={required}
         pattern={pattern}
       />
-    </div>
+    </>
   );
 };
 

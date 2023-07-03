@@ -11,7 +11,7 @@ const useNetworkStatus = () => {
         })
           .then(() => !isOnline && setIsOnline(true))
           .catch(() => isOnline && setIsOnline(false));
-      }, 30000);
+      }, 300000);
 
       return () => clearInterval(interval);
     } else {

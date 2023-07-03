@@ -23,7 +23,7 @@ const useFetchData = ({ url, options }: OptionsType) => {
       try {
         const response = await axios({
           url,
-          method: options?.method,
+          method: options?.method || "GET",
           data: options?.body,
           params: options?.params,
           headers: {
@@ -42,6 +42,7 @@ const useFetchData = ({ url, options }: OptionsType) => {
     };
 
     fetchData();
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
   return { data, isLoading, error };
