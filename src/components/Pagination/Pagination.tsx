@@ -2,7 +2,6 @@ import React from "react";
 
 import styles from "./Pagination.module.scss";
 import { INavigation } from "../../types/types";
-import { isObjectEmpty } from "../../utils";
 import Button from "../Button/Button";
 
 interface IProps {
@@ -20,14 +19,14 @@ const Pagination: React.FC<IProps> = ({
     <footer className={styles.wrapper}>
       <Button
         customClass={styles.navigation}
-        disabled={!isObjectEmpty(navigation) && !navigation?.prev}
+        disabled={!navigation?.prev}
         onClick={() => goToPrevious()}
         label="Previous"
         testId="previous"
       />
       <Button
         customClass={styles.navigation}
-        disabled={!isObjectEmpty(navigation) && !navigation?.next}
+        disabled={!navigation?.next}
         onClick={() => goToNext()}
         label="Next"
         testId="next"

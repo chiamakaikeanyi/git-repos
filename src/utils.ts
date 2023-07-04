@@ -22,8 +22,6 @@ export const sortByStarsDescending = (a: IRepository, b: IRepository) => {
   return 0;
 };
 
-export const isObjectEmpty = (object = {}) => Object.keys(object).length === 0;
-
 export const parseLink = (link: string) => {
   const links: Record<string, string> = {};
 
