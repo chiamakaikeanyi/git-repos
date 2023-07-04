@@ -15,9 +15,9 @@ export const composeClass = (...styles: string[]) => {
   return classes.trim();
 };
 
-export const sortByStarsDescending = (a: IRepository, b: IRepository) => {
-  if (a.stargazers_count < b.stargazers_count) return 1;
-  if (b.stargazers_count < a.stargazers_count) return -1;
+export const sortByDateDescending = (a: IRepository, b: IRepository) => {
+  if (a.created_at < b.created_at) return 1;
+  if (b.created_at < a.created_at) return -1;
 
   return 0;
 };

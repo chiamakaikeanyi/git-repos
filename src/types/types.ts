@@ -21,6 +21,7 @@ export interface IRepository {
   language: string;
   stargazers_count: number;
   forks_count: number;
+  created_at: string;
 }
 
 export interface INavigation {

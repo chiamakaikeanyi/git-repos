@@ -10,7 +10,7 @@ import {
   REPOS_PER_PAGE,
 } from "../../services/constants";
 import { INavigation, IRepository } from "../../types/types";
-import { parseLink, sortByStarsDescending } from "../../utils";
+import { parseLink, sortByDateDescending } from "../../utils";
 import { ForkIcon, Spinner, StarIcon } from "../Icons";
 import Pagination from "../Pagination/Pagination";
 
@@ -64,7 +64,7 @@ const UserRepositories = () => {
             aria-live="polite"
             data-testid="repositories"
           >
-            {repositories?.sort(sortByStarsDescending)?.map((repository) => (
+            {repositories?.sort(sortByDateDescending)?.map((repository) => (
               <li key={repository.id}>
                 <a
                   href={repository.html_url}
