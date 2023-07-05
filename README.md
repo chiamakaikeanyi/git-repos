@@ -1,6 +1,8 @@
 # Git Repos
 
-<!-- ![Design preview](./design/preview.png) -->
+Dev's GitHub summary
+
+![Design preview](./src/screenshot.png)
 
 ## Table of contents
 
