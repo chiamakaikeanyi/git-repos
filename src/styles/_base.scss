@@ -58,6 +58,15 @@ ul {
 a {
   color: var(--font-color);
   text-decoration: none;
+
+  &:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
 // attributes & states
@@ -95,4 +104,9 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+/* remove lastpass styling */
+[data-lastpass-icon-root] {
+  display: none;
 }
